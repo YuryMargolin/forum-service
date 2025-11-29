@@ -4,7 +4,7 @@ const schemas = {
     createPost: Joi.object({
         title: Joi.string().required(),
         content: Joi.string().required(),
-        tags: Joi.array().items(Joi.string())
+        tags: Joi.array().items(Joi.string().pattern(/^\S+$/))
     }),
 
     createComment: Joi.object({
