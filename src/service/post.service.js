@@ -32,7 +32,7 @@ class PostService {
     async deletePost(id) {
         const post = await postRepository.deletePost(id);
         if (!post) {
-            throw new Error(`Post with id ${postId} not found`);
+            throw new Error(`Post with id ${id} not found`);
         }
         return post;
     };
